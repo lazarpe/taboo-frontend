@@ -15,7 +15,12 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stacko.Navigator initialRouteName="Home">
+      <Stacko.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+        initialRouteName="Home"
+      >
         <Stacko.Screen name="Home" component={Menu} />
         <Stacko.Screen name="Join" component={Join} />
         <Stacko.Screen name="Host" component={Host} />
