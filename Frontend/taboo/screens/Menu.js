@@ -3,8 +3,6 @@ import { StyleSheet, Text, View } from "react-native";
 import RedButton from "../parts/atoms/RedButton";
 import WhiteButton from "../parts/atoms/WhiteButton";
 import LottieView from "lottie-react-native";
-import { NavigationContainer, StackActions } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 export default function Menu({ navigation }) {
   return (
@@ -21,7 +19,11 @@ export default function Menu({ navigation }) {
         style={styles.buttonStyle}
         title="JOIN"
       />
-      <WhiteButton style={styles.buttonStyle} title="HOST" />
+      <WhiteButton
+        onPress={() => navigation.navigate("Host")}
+        style={styles.buttonStyle}
+        title="HOST"
+      />
       <StatusBar style="auto" />
     </View>
   );

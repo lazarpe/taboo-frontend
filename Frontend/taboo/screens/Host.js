@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import RedButton from "../parts/atoms/RedButton";
 
-export default function Menu() {
+export default function Host() {
   return (
     <View style={styles.container}>
       <Text style={styles.textStyle}>Game Mode</Text>
