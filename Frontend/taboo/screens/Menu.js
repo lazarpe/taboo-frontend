@@ -3,8 +3,10 @@ import { StyleSheet, Text, View } from "react-native";
 import RedButton from "../parts/atoms/RedButton";
 import WhiteButton from "../parts/atoms/WhiteButton";
 import LottieView from "lottie-react-native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default function Menu() {
+export default function Menu({ navigation }) {
   return (
     <View style={styles.container}>
       <LottieView
@@ -15,7 +17,7 @@ export default function Menu() {
       />
       <Text style={styles.textStyle}>SPACE BOWL</Text>
       <RedButton
-        onPress={() => navigation.navigate("")}
+        onPress={() => navigation.navigate("Join")}
         style={styles.buttonStyle}
         title="JOIN"
       />

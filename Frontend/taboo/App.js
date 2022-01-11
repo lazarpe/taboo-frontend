@@ -4,7 +4,7 @@ import Join from "./screens/Join";
 import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-const HomeStack = createNativeStackNavigator();
+const Stacko = createNativeStackNavigator();
 
 export default function App() {
   const io = require("socket.io-client");
@@ -13,14 +13,10 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="home"
-          component={Menu}
-          options={{ title: "Welcome" }}
-        />
-        <Stack.Screen name="Profile" component={Join} />
-      </Stack.Navigator>
+      <Stacko.Navigator initialRouteName="Home">
+        <Stacko.Screen name="Home" component={Menu} />
+        <Stacko.Screen name="Join" component={Join} />
+      </Stacko.Navigator>
     </NavigationContainer>
   );
 }
