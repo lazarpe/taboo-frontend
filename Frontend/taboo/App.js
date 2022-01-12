@@ -1,9 +1,13 @@
-import React from "react-native";
+import React, { View } from "react-native";
 import Menu from "./screens/Menu";
 import Join from "./screens/Join";
 import Host from "./screens/Host";
 
-import { NavigationContainer, StackActions } from "@react-navigation/native";
+import {
+  NavigationContainer,
+  StackActions,
+  DefaultTheme,
+} from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stacko = createNativeStackNavigator();
@@ -16,6 +20,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stacko.Navigator
+        activeColor="#161853"
+        inactiveColor="#161853"
         screenOptions={{
           headerShown: false,
         }}

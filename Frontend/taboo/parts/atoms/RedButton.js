@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#EC255A",
   },
   text: {
-    fontSize: 16,
+    fontSize: 20,
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
