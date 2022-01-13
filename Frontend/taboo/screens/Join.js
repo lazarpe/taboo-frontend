@@ -4,10 +4,12 @@ import RedButton from "../parts/atoms/RedButton";
 import GoToMenuButton from "../parts/atoms/GoToMenuButton";
 import Svg, { Path } from "react-native-svg";
 import TextInputi from "../parts/atoms/TextInputi";
+import Icon from "../parts/atoms/BgStars";
 
 export default function Join({ navigation }) {
   return (
     <View style={styles.container}>
+      <Icon />
       <View style={styles.menuButton}>
         <Pressable onPress={() => navigation.navigate("Home")}>
           <Svg
