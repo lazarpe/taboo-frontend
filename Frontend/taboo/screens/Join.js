@@ -21,12 +21,15 @@ export default function Join({ navigation }) {
           />
         </Svg>
       </Pressable>
-      <Text style={styles.textStyle}>Space ID</Text>
-      <TextInputi />
-      <Text style={styles.textStyle}>Your Name</Text>
-      <TextInputi />
+      <View style={styles.smallBox}>
+        <View style={styles.spaceIdField}>
+          <Text style={styles.textStyle}>Space ID</Text>
+          <TextInputi />
+        </View>
+        <Text style={styles.textStyle}>Your Name</Text>
+        <TextInputi />
+      </View>
       <RedButton style={styles.buttonStyle} title="ENTER" />
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -39,12 +42,21 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textStyle: {
-    marginTop: 70,
     fontSize: 20,
     color: "white",
     fontWeight: "bold",
+    paddingLeft: 15,
   },
   lottie: {
     marginTop: -200,
+  },
+  smallBox: {
+    backgroundColor: "#292C6D",
+    borderRadius: 10,
+    margin: 10,
+    padding: 20,
+  },
+  spaceIdField: {
+    marginBottom: 20,
   },
 });
