@@ -3,10 +3,12 @@ import { StyleSheet, Text, View } from "react-native";
 import RedButton from "../parts/atoms/RedButton";
 import WhiteButton from "../parts/atoms/WhiteButton";
 import LottieView from "lottie-react-native";
+import Icon from "../parts/atoms/BgStars";
 
 export default function Menu({ navigation }) {
   return (
     <View style={styles.container}>
+      <Icon />
       <LottieView
         source={require("../assets/animations/planet.json")}
         autoPlay
