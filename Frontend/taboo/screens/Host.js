@@ -1,13 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import RedButton from "../parts/atoms/RedButton";
-import Svg, { Path } from "react-native-svg";
 import GoToMenuButton from "../parts/atoms/GoToMenuButton";
+import Svg, { Path } from "react-native-svg";
+import TextInputi from "../parts/atoms/TextInputi";
+import TextInputiNotEditable from "../parts/atoms/TextInputiNotEditable";
 
 export default function Host({ navigation }) {
   return (
     <View style={styles.container}>
-      <View>
+      <View style={styles.menuButton}>
         <Pressable onPress={() => navigation.navigate("Home")}>
           <Svg
             width="71"
@@ -22,11 +24,21 @@ export default function Host({ navigation }) {
           </Svg>
         </Pressable>
       </View>
-      <Text style={styles.textStyle}>Game Mode</Text>
-      <Text style={styles.textStyle}>Space ID</Text>
-      <Text style={styles.textStyle}>Your Name</Text>
+      <View style={styles.smallBox}>
+        <View style={styles.spaceIdField}>
+          <Text style={styles.textStyle}>Game mode</Text>
+          <TextInputiNotEditable title="Taboo" />
+        </View>
+        <View style={styles.spaceIdField}>
+          <Text style={styles.textStyle}>Space ID</Text>
+          <TextInputiNotEditable title="HSDCDF" />
+        </View>
+        <View style={styles.spaceIdField}>
+          <Text style={styles.textStyle}>Your name</Text>
+          <TextInputi />
+        </View>
+      </View>
       <RedButton style={styles.buttonStyle} title="HOST" />
-      <StatusBar style="auto" />
     </View>
   );
 }
@@ -39,12 +51,26 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   textStyle: {
-    marginTop: 70,
     fontSize: 20,
     color: "white",
     fontWeight: "bold",
+    paddingLeft: 15,
   },
   lottie: {
     marginTop: -200,
+  },
+  smallBox: {
+    backgroundColor: "#292C6D",
+    borderRadius: 10,
+    margin: 10,
+    padding: 20,
+  },
+  spaceIdField: {
+    marginBottom: 20,
+  },
+  menuButton: {
+    top: 65,
+    margin: 10,
+    position: "absolute",
   },
 });

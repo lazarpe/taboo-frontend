@@ -1,14 +1,17 @@
 import { SafeAreaView, StyleSheet, TextInput } from "react-native";
 import React from "react";
 
-export default function TextInputi() {
+export default function TextInputiNotEditable(props) {
+  const { title = "Save" } = props;
   const [text, onChangeText] = React.useState("");
   return (
     <SafeAreaView>
       <TextInput
         style={styles.input}
         onChangeText={onChangeText}
-        value={text}
+        value={title}
+        editable={false}
+        placeholderTextColor={"black"}
       />
     </SafeAreaView>
   );
