@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import RedButton from "../parts/atoms/RedButton";
 import GoToMenuButton from "../parts/atoms/GoToMenuButton";
 import Svg, { Path } from "react-native-svg";
+import TextInputi from "../parts/atoms/TextInputi";
 
 export default function Join({ navigation }) {
   return (
@@ -21,7 +22,9 @@ export default function Join({ navigation }) {
         </Svg>
       </Pressable>
       <Text style={styles.textStyle}>Space ID</Text>
+      <TextInputi />
       <Text style={styles.textStyle}>Your Name</Text>
+      <TextInputi />
       <RedButton style={styles.buttonStyle} title="ENTER" />
       <StatusBar style="auto" />
     </View>
