@@ -23,7 +23,7 @@ export default function Menu({ navigation }) {
       />
       <WhiteButton
         onPress={() => navigation.navigate("Host")}
-        style={styles.buttonStyle}
+        //btnColor={(backgroundColor = "#FFFF")}
         title="HOST"
       />
       <StatusBar style="auto" />

@@ -40,7 +40,7 @@ export default function Host({ navigation }) {
           <TextInputi />
         </View>
       </View>
-      <RedButton style={styles.buttonStyle} title="HOST" />
+      <RedButton title="HOST" />
     </View>
   );
 }

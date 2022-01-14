@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Text, View, StyleSheet, Pressable } from "react-native";
 
 export default function WhiteButton(props) {
-  const { onPress, title = "Save" } = props;
+  const { onPress, title = "Save", btnColor } = props;
   return (
-    <Pressable style={styles.button} onPress={onPress}>
+    <Pressable style={[styles.button, btnColor]} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </Pressable>
   );
