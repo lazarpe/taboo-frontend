@@ -40,7 +40,10 @@ export default function Host({ navigation }) {
           <TextInputi />
         </View>
       </View>
-      <RedButton title="HOST" />
+      <RedButton
+        onPress={() => navigation.navigate("QueueHost")}
+        title="HOST"
+      />
     </View>
   );
 }
