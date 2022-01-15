@@ -21,22 +21,22 @@ export default function QueueHost({ navigation }) {
       <View style={styles.nonAnimationView}>
         <View style={styles.smallBox}>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Player 1</Text>
+            <Text style={styles.textStyle}>Bobby</Text>
           </View>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Player 2</Text>
+            <Text style={styles.textStyle}>Marley</Text>
           </View>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Player 3</Text>
+            <Text style={styles.textStyle}>Peter</Text>
           </View>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Player 3</Text>
+            <Text style={styles.textStyle}>Hans</Text>
           </View>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Player 3</Text>
+            <Text style={styles.textStyle}>Marlies</Text>
           </View>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Player 3</Text>
+            <Text style={styles.textStyle}>Luise</Text>
           </View>
         </View>
 
@@ -71,13 +71,14 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
   },
   lottie: {
-    marginTop: -250,
+    marginTop: -270,
   },
   smallBox: {
     backgroundColor: "#292C6D",
     borderRadius: 10,
-    margin: 5,
-    padding: 20,
+    marginTop: 5,
+    paddingBottom: 0,
+    paddingTop: 5,
   },
   spaceIdField: {
     marginBottom: 20,

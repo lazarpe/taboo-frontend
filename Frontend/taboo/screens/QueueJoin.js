@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Pressable } from "react-native";
 import AppButton from "../parts/atoms/AppButton";
+import LottieView from "lottie-react-native";
 
 import GoToMenuButton from "../parts/atoms/GoToMenuButton";
 import Svg, { Path } from "react-native-svg";
@@ -8,29 +9,44 @@ import TextInputi from "../parts/atoms/TextInputi";
 import TextInputiNotEditable from "../parts/atoms/TextInputiNotEditable";
 import Icon from "../parts/atoms/BgStars";
 
-export default function QueueJoin({ navigation }) {
+export default function QueueHost({ navigation }) {
   return (
     <View style={styles.container}>
-      <Icon />
-      <View style={styles.spaceIdField}>
-        <Text style={styles.textStyle}>Lobby</Text>
-      </View>
-      <View style={styles.smallBox}>
-        <View style={styles.spaceIdField}>
-          <Text style={styles.textStyle}>Player 1</Text>
-        </View>
-        <View style={styles.spaceIdField}>
-          <Text style={styles.textStyle}>Player 2</Text>
-        </View>
-        <View style={styles.spaceIdField}>
-          <Text style={styles.textStyle}>Player 3</Text>
-        </View>
-      </View>
-      <AppButton
-        onPress={() => navigation.navigate("Join")}
-        //btnColor={(backgroundColor = "#FFFF")}
-        title="LEAVE"
+      <LottieView
+        source={require("../assets/animations/queue-animation.json")}
+        autoPlay
+        loop
+        style={styles.lottie}
       />
+      <View style={styles.nonAnimationView}>
+        <View style={styles.smallBox}>
+          <View style={styles.spaceIdField}>
+            <Text style={styles.textStyle}>Bobby</Text>
+          </View>
+          <View style={styles.spaceIdField}>
+            <Text style={styles.textStyle}>Marley</Text>
+          </View>
+          <View style={styles.spaceIdField}>
+            <Text style={styles.textStyle}>Peter</Text>
+          </View>
+          <View style={styles.spaceIdField}>
+            <Text style={styles.textStyle}>Hans</Text>
+          </View>
+          <View style={styles.spaceIdField}>
+            <Text style={styles.textStyle}>Marlies</Text>
+          </View>
+          <View style={styles.spaceIdField}>
+            <Text style={styles.textStyle}>Luise</Text>
+          </View>
+        </View>
+
+        <AppButton
+          onPress={() => navigation.navigate("Host")}
+          backgroundColor="#A3A6A9"
+          color="#FFFFFF"
+          title="LEAVE"
+        />
+      </View>
     </View>
   );
 }
@@ -38,7 +54,7 @@ export default function QueueJoin({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#161853",
+    backgroundColor: "#FFFFFF",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -49,13 +65,14 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
   },
   lottie: {
-    marginTop: -200,
+    marginTop: -270,
   },
   smallBox: {
     backgroundColor: "#292C6D",
     borderRadius: 10,
-    margin: 10,
-    padding: 25,
+    marginTop: 5,
+    paddingBottom: 0,
+    paddingTop: 5,
   },
   spaceIdField: {
     marginBottom: 20,
@@ -65,6 +82,9 @@ const styles = StyleSheet.create({
   menuButton: {
     top: 65,
     margin: 10,
-    position: "absolute",
+    position: "relative",
+  },
+  nonAnimationView: {
+    marginTop: 280,
   },
 });
