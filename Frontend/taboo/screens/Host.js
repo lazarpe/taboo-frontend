@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Pressable } from "react-native";
-import RedButton from "../parts/atoms/RedButton";
+import AppButton from "../parts/atoms/AppButton";
 import GoToMenuButton from "../parts/atoms/GoToMenuButton";
 import Svg, { Path } from "react-native-svg";
 import TextInputi from "../parts/atoms/TextInputi";
@@ -40,9 +40,11 @@ export default function Host({ navigation }) {
           <TextInputi />
         </View>
       </View>
-      <RedButton
+      <AppButton
         onPress={() => navigation.navigate("QueueHost")}
         title="HOST"
+        backgroundColor="#EC255A"
+        color="#FFFFFF"
       />
     </View>
   );

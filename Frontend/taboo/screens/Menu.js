@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import RedButton from "../parts/atoms/RedButton";
-import WhiteButton from "../parts/atoms/WhiteButton";
+import AppButton from "../parts/atoms/AppButton";
 import LottieView from "lottie-react-native";
 import Icon from "../parts/atoms/BgStars";
 
@@ -16,14 +15,17 @@ export default function Menu({ navigation }) {
         style={styles.lottie}
       />
       <Text style={styles.textStyle}>SPACE BOWL</Text>
-      <RedButton
+      <AppButton
         onPress={() => navigation.navigate("Join")}
         style={styles.buttonStyle}
+        backgroundColor="#EC255A"
+        color="white"
         title="JOIN"
       />
-      <WhiteButton
+      <AppButton
         onPress={() => navigation.navigate("Host")}
-        //btnColor={(backgroundColor = "#FFFF")}
+        backgroundColor="#FAEDF0"
+        color="#161853"
         title="HOST"
       />
       <StatusBar style="auto" />

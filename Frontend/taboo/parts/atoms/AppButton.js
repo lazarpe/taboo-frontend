@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet, Pressable } from "react-native";
 
-export default function RedButton(props) {
-  const { onPress, title = "Save" } = props;
+export default function AppButton(props) {
+  const { onPress, title = "Save", backgroundColor, color } = props;
   return (
-    <Pressable style={styles.button} onPress={onPress}>
-      <Text style={styles.text}>{title}</Text>
+    <Pressable
+      style={[styles.button, backgroundColor && { backgroundColor }]}
+      onPress={onPress}
+    >
+      <Text style={[styles.text, color && { color }]}>{title}</Text>
     </Pressable>
   );
 }
@@ -20,13 +23,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
     borderRadius: 25,
     elevation: 3,
-    backgroundColor: "#EC255A",
+    backgroundColor: "#FAEDF0",
   },
   text: {
     fontSize: 20,
     lineHeight: 21,
     fontWeight: "bold",
     letterSpacing: 0.25,
-    color: "white",
+    color: "#292C6D",
   },
 });

@@ -1,7 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Pressable } from "react-native";
-import RedButton from "../parts/atoms/RedButton";
-import WhiteButton from "../parts/atoms/WhiteButton";
+import AppButton from "../parts/atoms/AppButton";
 
 import GoToMenuButton from "../parts/atoms/GoToMenuButton";
 import Svg, { Path } from "react-native-svg";
@@ -27,7 +26,7 @@ export default function QueueJoin({ navigation }) {
           <Text style={styles.textStyle}>Player 3</Text>
         </View>
       </View>
-      <WhiteButton
+      <AppButton
         onPress={() => navigation.navigate("Join")}
         //btnColor={(backgroundColor = "#FFFF")}
         title="LEAVE"
