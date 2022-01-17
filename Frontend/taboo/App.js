@@ -4,6 +4,7 @@ import Join from "./screens/Join";
 import Host from "./screens/Host";
 import QueueHost from "./screens/QueueHost";
 import QueueJoin from "./screens/QueueJoin";
+import PlayDescribe from "./screens/PlayDescribe"
 
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 
@@ -44,6 +45,7 @@ export default function App() {
           <Stacko.Screen name="Host" component={Host} />
           <Stacko.Screen name="QueueHost" component={QueueHost} />
           <Stacko.Screen name="QueueJoin" component={QueueJoin} />
+          <Stacko.Screen name="PlayDescribe" component={PlayDescribe} />
         </Stacko.Navigator>
       </NavigationContainer>
     </PaperProvider>

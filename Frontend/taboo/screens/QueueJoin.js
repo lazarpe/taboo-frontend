@@ -21,13 +21,13 @@ export default function QueueHost({ navigation }) {
       <View style={styles.nonAnimationView}>
         <View style={styles.smallBox}>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Bobby</Text>
+            <Text style={styles.textStyle}>Branko</Text>
           </View>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Marley</Text>
+            <Text style={styles.textStyle}>Dusko</Text>
           </View>
           <View style={styles.spaceIdField}>
-            <Text style={styles.textStyle}>Peter</Text>
+            <Text style={styles.textStyle}>Martina</Text>
           </View>
           <View style={styles.spaceIdField}>
             <Text style={styles.textStyle}>Hans</Text>
