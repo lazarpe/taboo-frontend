@@ -28,19 +28,25 @@ export default function Join({ navigation }) {
       <View style={styles.smallBox}>
         <View style={styles.spaceIdField}>
           <Text style={styles.textStyle}>Space ID</Text>
-          <TextInputi />
+          <TextInputi value={"hallo"} />
         </View>
         <Text style={styles.textStyle}>Your Name</Text>
         <TextInputi />
       </View>
       <AppButton
-        onPress={() => navigation.navigate("QueueJoin")}
+        onPress={() => {
+          joinGame();
+        }}
         title="ENTER"
         backgroundColor="#EC255A"
         color="#FFFFFF"
       />
     </View>
   );
+
+  function joinGame() {
+    navigation.navigate("QueueJoin")
+  }
 }
 
 const styles = StyleSheet.create({

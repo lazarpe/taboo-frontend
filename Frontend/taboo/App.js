@@ -29,6 +29,8 @@ export default function App() {
   const socket = io("http://server.davidemarcoli.de:9092/");
   socket.connect();
 
+  console.log(socket);
+
   return (
     <PaperProvider theme={theme}>
       <NavigationContainer>

@@ -3,12 +3,6 @@ import { StyleSheet, Text, View, Pressable } from "react-native";
 import AppButton from "../parts/atoms/AppButton";
 import LottieView from "lottie-react-native";
 
-import GoToMenuButton from "../parts/atoms/GoToMenuButton";
-import Svg, { Path } from "react-native-svg";
-import TextInputi from "../parts/atoms/TextInputi";
-import TextInputiNotEditable from "../parts/atoms/TextInputiNotEditable";
-import Icon from "../parts/atoms/BgStars";
-
 export default function QueueHost({ navigation }) {
   return (
     <View style={styles.container}>
@@ -41,7 +35,7 @@ export default function QueueHost({ navigation }) {
         </View>
 
         <AppButton
-          onPress={() => navigation.navigate("Host")}
+          onPress={() => navigation.navigate("Join")}
           backgroundColor="#A3A6A9"
           color="#FFFFFF"
           title="LEAVE"
